@@ -40,13 +40,13 @@ metalsmith.use(assets({
 Each static file copy is handled through naming the `<name>.assets` files. The file's metadata options are passed off to [`metalsmith-assets`](https://github.com/treygriffith/metalsmith-assets) to copy the assets. All [`metalsmith-assets` options](https://github.com/treygriffith/metalsmith-assets#using-the-cli) apply, defined through each .static file:
 
 ### Example
-#### `src/public.static`
+#### `src/public.assets`
 ``` yaml
 ---
 source: public
 destination: .
 ---
-Copy all the public files into the built directory.
+Copy all the public files into the build directory.
 ```
 
 ## License
