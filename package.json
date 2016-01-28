@@ -1,0 +1,34 @@
+{
+  "name": "metalsmith-static-convention",
+  "version": "0.0.1",
+  "description": "Metalsmith Static Convention Plugin",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "mocha && xo --no-semicolon --space"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/RobLoach/metalsmith-static-convention"
+  },
+  "keywords": [
+    "metalsmith"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RobLoach/metalsmith-static-convention/issues"
+  },
+  "homepage": "https://github.com/RobLoach/metalsmith-static-convention",
+  "dependencies": {
+    "async": "^1.3.0",
+    "metalsmith-assets": "^0.1.0",
+    "metalsmith-static": "0.0.5"
+  },
+  "devDependencies": {
+    "assert-dir-equal": "^1.0.1",
+    "metalsmith": "^2.0.1",
+    "mocha": "*",
+    "xo": "^0.12.1"
+  }
+}
