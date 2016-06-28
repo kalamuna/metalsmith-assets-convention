@@ -1,7 +1,7 @@
 'use strict'
 
-var metalsmithAssets = require('metalsmith-assets')
 var path = require('path')
+var metalsmithAssets = require('metalsmith-assets')
 var async = require('async')
 
 module.exports = function (opts) {
@@ -14,37 +14,36 @@ module.exports = function (opts) {
     /**
      * Check if the given file is a .concat file. Call done() with result.
      */
-    function filterFile(file, done) {
+    function filterFile(file, callback) {
       // Ensure it matches the extension.
       var correctExtention = path.extname(file) === opts.extname
 
       // Make sure it has defined files.
       var source = files[file].source || false
       var destination = files[file].destination || false
-      done(correctExtention && source && destination)
+      callback(null, correctExtention && source && destination)
     }
 
     /**
      * Tell Metalsmith Assets to process the data.
      */
-    function assetFile(file, done) {
-      if (file in files) {
-        // Execute assets plugin.
-        var data = {
-          source: files[file].source,
-          destination: files[file].destination
-        }
-        metalsmithAssets(data)(files, metalsmith, done)
-
-        // We do not need the .assets file anymore.
-        delete files[file]
+    function assetFile(filename, callback) {
+      var data = {
+        source: files[filename].source,
+        destination: files[filename].destination
       }
+      delete files[filename]
+      metalsmithAssets(data)(files, metalsmith, callback)
     }
 
     // Find all the .concat files.
-    async.filter(Object.keys(files), filterFile, function (assets) {
-      // Use async to process each concat object.
-      async.each(assets, assetFile, done)
+    async.filter(Object.keys(files), filterFile, function (err, assets) {
+      if (err) {
+        done(err)
+      } else {
+        // Use async to process each concat object.
+        async.each(assets, assetFile, done)
+      }
     })
   }
 }
