@@ -20,7 +20,7 @@ module.exports = function (opts) {
 
       // Make sure it has defined files.
       var source = files[file].source || false
-      var destination = files[file].destination || false
+      var destination = files[file].destination || '.'
       callback(null, correctExtention && source && destination)
     }
 
@@ -30,7 +30,7 @@ module.exports = function (opts) {
     function assetFile(filename, callback) {
       var data = {
         source: files[filename].source,
-        destination: files[filename].destination
+        destination: files[filename].destination || path.join(path.dirname(filename), '.')
       }
       delete files[filename]
       metalsmithAssets(data)(files, metalsmith, callback)

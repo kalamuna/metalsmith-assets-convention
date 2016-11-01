@@ -26,4 +26,5 @@ describe('metalsmith-static-conventions', function () {
   test('basic')
   test('directory')
   test('multiple')
+  test('subfolder')
 })

@@ -49,6 +49,9 @@ destination: .
 Copy all the public files into the build directory.
 ```
 
+- `source` represents the path to the original assets.
+- `destination` represents the path to where the final files will live. When not provided, will be where the original `.asset` file existed.
+
 ## License
 
 MIT
