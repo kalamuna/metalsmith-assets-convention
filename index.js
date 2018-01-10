@@ -1,8 +1,8 @@
 'use strict'
 
-var path = require('path')
-var metalsmithAssets = require('metalsmith-assets')
-var async = require('async')
+const path = require('path')
+const metalsmithAssets = require('metalsmith-assets')
+const async = require('async')
 
 module.exports = function (opts) {
   // Default configuration.
@@ -16,11 +16,11 @@ module.exports = function (opts) {
      */
     function filterFile(file, callback) {
       // Ensure it matches the extension.
-      var correctExtention = path.extname(file) === opts.extname
+      const correctExtention = path.extname(file) === opts.extname
 
       // Make sure it has defined files.
-      var source = files[file].source || false
-      var destination = files[file].destination || '.'
+      const source = files[file].source || false
+      const destination = files[file].destination || '.'
       callback(null, correctExtention && source && destination)
     }
 
@@ -28,7 +28,7 @@ module.exports = function (opts) {
      * Tell Metalsmith Assets to process the data.
      */
     function assetFile(filename, callback) {
-      var data = {
+      const data = {
         source: files[filename].source,
         destination: files[filename].destination || path.join(path.dirname(filename), '.')
       }
@@ -37,7 +37,7 @@ module.exports = function (opts) {
     }
 
     // Find all the .concat files.
-    async.filter(Object.keys(files), filterFile, function (err, assets) {
+    async.filter(Object.keys(files), filterFile, (err, assets) => {
       if (err) {
         done(err)
       } else {
