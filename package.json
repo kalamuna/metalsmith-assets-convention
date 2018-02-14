@@ -29,6 +29,6 @@
     "assert-dir-equal": "^1.1.0",
     "metalsmith": "^2.3.0",
     "mocha": "*",
-    "xo": "^0.18.2"
+    "xo": "^0.20.0"
   }
 }
