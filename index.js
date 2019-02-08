@@ -13,6 +13,9 @@ module.exports = function (opts) {
   return function (files, metalsmith, done) {
     /**
      * Check if the given file is a .concat file. Call done() with result.
+     *
+     * @param {string} file The file to filter on.
+     * @param {function} callback A asyncronous callback that's made once the processing is complete.
      */
     function filterFile(file, callback) {
       // Ensure it matches the extension.
@@ -26,6 +29,9 @@ module.exports = function (opts) {
 
     /**
      * Tell Metalsmith Assets to process the data.
+     *
+     * @param {string} filename The file to filter on.
+     * @param {function} callback A asyncronous callback that's made once the processing is complete.
      */
     function assetFile(filename, callback) {
       const data = {

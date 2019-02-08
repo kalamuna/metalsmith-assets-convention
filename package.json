@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-assets-convention",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Metalsmith Assets Convention Plugin",
   "files": [
     "index.js"
@@ -11,19 +11,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/RobLoach/metalsmith-assets-convention"
+    "url": "git://github.com/kalamuna/metalsmith-assets-convention"
   },
   "keywords": [
     "metalsmith"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RobLoach/metalsmith-assets-convention/issues"
+    "url": "https://github.com/kalamuna/metalsmith-assets-convention/issues"
   },
-  "homepage": "https://github.com/RobLoach/metalsmith-assets-convention",
+  "homepage": "https://github.com/kalamuna/metalsmith-assets-convention",
   "dependencies": {
     "async": "^2.6.0",
-    "metalsmith-assets": "^0.1.0"
+    "metalsmith-assets": "github:RobLoach/metalsmith-assets#0.2.0"
   },
   "devDependencies": {
     "assert-dir-equal": "^1.1.0",
