@@ -1,7 +1,7 @@
 'use strict'
 
 const path = require('path')
-const metalsmithAssets = require('metalsmith-assets')
+const metalsmithAssets = require('metalsmith-assets-improved')
 const async = require('async')
 
 module.exports = function (opts) {
@@ -34,11 +34,19 @@ module.exports = function (opts) {
      * @param {function} callback A asyncronous callback that's made once the processing is complete.
      */
     function assetFile(filename, callback) {
+      // Construct the options for metalsmith-assets-improved.
       const data = {
-        source: files[filename].source,
-        destination: files[filename].destination || path.join(path.dirname(filename), '.')
+        src: files[filename].src || files[filename].source,
+        dest: files[filename].dest || files[filename].destination || path.join(path.dirname(filename), '.')
       }
+      if (files[filename].replace) {
+        data.replace = files[filename].replace
+      }
+
+      // Replace the .asset file.
       delete files[filename]
+
+      // Engage the plugin.
       metalsmithAssets(data)(files, metalsmith, callback)
     }
 
