@@ -1,8 +1,8 @@
 # Metalsmith Assets Convention Plugin [![NPM version](https://img.shields.io/npm/v/metalsmith-assets-convention.svg)](https://www.npmjs.org/package/metalsmith-assets-convention)
 
-[![Build Status](https://img.shields.io/travis/RobLoach/metalsmith-assets-convention/master.svg)](https://travis-ci.org/RobLoach/metalsmith-assets-convention)
-[![Dependency Status](https://david-dm.org/RobLoach/metalsmith-assets-convention.png)](https://david-dm.org/RobLoach/metalsmith-assets-convention)
-[![Greenkeeper badge](https://badges.greenkeeper.io/RobLoach/metalsmith-assets-convention.svg)](https://greenkeeper.io/)
+[![Build Status](https://img.shields.io/travis/kalamuna/metalsmith-assets-convention/master.svg)](https://travis-ci.org/kalamuna/metalsmith-assets-convention)
+[![Dependency Status](https://david-dm.org/kalamuna/metalsmith-assets-convention.png)](https://david-dm.org/kalamuna/metalsmith-assets-convention)
+[![Greenkeeper badge](https://badges.greenkeeper.io/kalamuna/metalsmith-assets-convention.svg)](https://greenkeeper.io/)
 
 [Metalsmith](http://metalsmith.io) plugin to define [static asset files](https://github.com/philgs/metalsmith-assets-improved) through file conventions.
 
