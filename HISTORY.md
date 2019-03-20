@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.0.0: 2019-03-03
+
+- Updated to [`metalsmith-assets-improved`](https://www.npmjs.com/package/metalsmith-assets-improved)
+
 ## v1.2.1: 2019-02-08
 
 - Update dependencies
