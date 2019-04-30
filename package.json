@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-assets-convention",
-  "version": "1.2.1",
+  "version": "2.1.0",
   "description": "Metalsmith Assets Convention Plugin",
   "files": [
     "index.js"

@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.1.0: 2019-04-30
+
+- Revert back to [metalsmith-assets](https://npm.im/metalsmith-assets)
+
 ## v2.0.0: 2019-03-03
 
 - Updated to [`metalsmith-assets-improved`](https://www.npmjs.com/package/metalsmith-assets-improved)
