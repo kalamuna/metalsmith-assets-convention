@@ -4,7 +4,7 @@
 [![Dependency Status](https://david-dm.org/kalamuna/metalsmith-assets-convention.png)](https://david-dm.org/kalamuna/metalsmith-assets-convention)
 [![Greenkeeper badge](https://badges.greenkeeper.io/kalamuna/metalsmith-assets-convention.svg)](https://greenkeeper.io/)
 
-[Metalsmith](http://metalsmith.io) plugin to define [static asset files](https://github.com/philgs/metalsmith-assets-improved) through file conventions.
+[Metalsmith](http://metalsmith.io) plugin to define [static asset files](https://github.com/treygriffith/metalsmith-assets) through file conventions.
 
 ## Installation
 
@@ -38,14 +38,14 @@ metalsmith.use(assets({
 
 ## Usage
 
-Each static file copy is handled through naming the `<name>.assets` files. The file's metadata options are passed off to [`metalsmith-assets-improved`](https://github.com/philgs/metalsmith-assets-improved) to copy the assets. All [`metalsmith-assets` options](https://github.com/philgs/metalsmith-assets-improved#configuration) apply, defined through each .static file:
+Each static file copy is handled through naming the `<name>.assets` files. The file's metadata options are passed off to [`metalsmith-assets`](https://github.com/treygriffith/metalsmith-assets) to copy the assets. All [`metalsmith-assets` options](https://github.com/treygriffith/metalsmith-assets#using-the-cli) apply, defined through each .static file:
 
 ### Example
 #### `src/public.assets`
 ``` yaml
 ---
-src: public
-dest: .
+source: public
+destination: .
 ---
 Copy all the public files into the build directory.
 ```
