@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.1.1: 2019-05-01
+
+- Update to [metalsmith-assets-2](https://npm.im/metalsmith-assets-2)
+
 ## v2.1.0: 2019-04-30
 
 - Revert back to [metalsmith-assets](https://npm.im/metalsmith-assets)

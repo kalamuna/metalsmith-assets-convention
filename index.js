@@ -1,7 +1,7 @@
 'use strict'
 
 const path = require('path')
-const metalsmithAssets = require('metalsmith-assets')
+const metalsmithAssets = require('metalsmith-assets-2')
 const async = require('async')
 
 module.exports = function (opts) {
